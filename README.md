@@ -45,6 +45,10 @@ In the current mode, `localboot` does the following:
 
 In the future I will also support VPD, which will be used as a substitute for EFI variables, in this specific case to hold the boot order of the various boot entries.
 
+## bls
+
+The `bls` program boots according to the [Boot loader specification](https://systemd.io/BOOT_LOADER_SPECIFICATION) (with support for retrieving entries from HTTP)
+
 ## uinit
 
 The `uinit` program just wraps `netboot` and `localboot` in a forever-loop logic, just like your BIOS/UEFI would do. At the moment it just loops between netboot and localboot in this order, but I plan to make this more flexible and configurable.
